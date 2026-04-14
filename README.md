@@ -55,3 +55,15 @@ To associate bogies with operational attributes like seating or load capacity. T
 3. **Iteration:** The system traverses the `entrySet()` to retrieve both the bogie name and its capacity.
 4. **Output:** The console displays a formatted mapping of all registered bogie capacities.
 
+---
+
+## Use Case 8: Filter Passenger Bogies Using Streams
+
+### 🎯 Objective
+To replace verbose manual loops with the **Java Stream API**. This allows administrators to dynamically select specific bogies (e.g., high-capacity ones) using a declarative programming style.
+
+### 🔄 Application Flow
+1. **Source:** The system takes the existing list of bogie objects.
+2. **Intermediate Operation:** A `filter()` is applied using a lambda expression (`capacity > 60`).
+3. **Terminal Operation:** The matching elements are gathered into a new list using `collect()`.
+4. **Integrity Check:** The original list remains unmodified, ensuring data safety.
