@@ -1,0 +1,11 @@
+  UC1-InitialConsist[m
+* [32mUC10-CapacityAggregation[m
+  UC2-ArrayListOperations[m
+  UC3-UniqueBogieIDs[m
+  UC4-OrderedConsist[m
+  UC5-OrderedUniqueness[m
+  UC6-BogieCapacityMapping[m
+  UC7-SortingByCapacity[m
+  UC8-StreamFiltering[m
+  UC9-GroupingByBogieType[m
+  main[m
