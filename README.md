@@ -67,3 +67,17 @@ To rank and organize bogies based on business logic (seating capacity). This use
 2. **Storage:** Objects are stored in a dynamic `List`.
 3. **Sorting:** A `Comparator` is applied to rearrange the list based on the integer capacity.
 4. **Output:** The console displays the bogies ranked from lowest to highest capacity.
+
+---
+
+## Use Case 9: Group Bogies by Type (Collectors.groupingBy)
+
+### 🎯 Objective
+To transform flat data into a hierarchical structure. This use case uses advanced Stream collectors to categorize bogies by type, facilitating organized reporting and resource management.
+
+### 🔄 Application Flow
+1. **Source:** A list of `Bogie` objects containing different types (Sleeper, AC Chair, etc.).
+2. **Classification:** A stream is processed where each bogie is classified by its `type`.
+3. **Aggregation:** `Collectors.groupingBy` gathers bogies of the same type into lists.
+4. **Storage:** The result is stored in a `Map<String, List<Bogie>>`.
+5. **Output:** The system prints a structured report showing all bogies grouped under their respective categories.
