@@ -94,3 +94,17 @@ To provide numerical metrics for the train consist by aggregating individual bog
 2. **Transformation:** The `map()` function extracts only the `capacity` (Integer) from each object.
 3. **Aggregation:** The `reduce(0, Integer::sum)` operation adds all extracted values together.
 4. **Output:** The system displays the final total seating capacity of the entire train.
+
+---
+
+## Use Case 11: Validate Train ID & Cargo Codes (Regex)
+
+### 🎯 Objective
+To ensure data integrity by validating user input against strict business rules. This use case introduces `Pattern` and `Matcher` to prevent malformed data from entering the system.
+
+### 🔄 Application Flow
+1. **Regex Definition:** Patterns are defined for Train IDs (`TRN-\d{4}`) and Cargo Codes (`PET-[A-Z]{2}`).
+2. **Compilation:** The `Pattern` class compiles these strings for efficient reuse.
+3. **Matching:** The `Matcher` class compares input strings against the compiled patterns.
+4. **Validation:** The system uses `matches()` to confirm if the entire string follows the rule, rejecting incorrect formats like lowercase letters or wrong digit counts.
+
