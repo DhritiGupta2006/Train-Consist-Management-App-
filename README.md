@@ -15,3 +15,16 @@ To initialize the application state and create a dynamic container for the train
 3. **Initialization:** An empty `ArrayList` is created to hold future bogies.
 4. **Summary:** The program displays the current bogie count (0).
 
+---
+
+## Use Case 3: Track Unique Bogie IDs (HashSet)
+
+### 🎯 Objective
+To enforce business rules that prevent duplicate bogie IDs from being registered. This use case introduces the `Set` interface and `HashSet` implementation to ensure data integrity within the railway system.
+
+### 🔄 Application Flow
+1. **Registration:** Several bogie IDs are added to a `HashSet`.
+2. **Deduplication:** The system attempts to add a duplicate ID ("BG101").
+3. **Rejection:** The `HashSet` automatically rejects the duplicate, maintaining only unique values.
+4. **Summary:** The program displays the verified list of unique IDs and the total count.
+
