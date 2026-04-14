@@ -108,3 +108,15 @@ To ensure data integrity by validating user input against strict business rules.
 3. **Matching:** The `Matcher` class compares input strings against the compiled patterns.
 4. **Validation:** The system uses `matches()` to confirm if the entire string follows the rule, rejecting incorrect formats like lowercase letters or wrong digit counts.
 
+---
+
+## Use Case 13: Performance Comparison (Loops vs Streams)
+
+### 🎯 Objective
+To evaluate the execution efficiency of different iteration styles. This use case moves away from theoretical assumptions and uses `System.nanoTime()` to measure actual performance between imperative loops and functional streams.
+
+### 🔄 Application Flow
+1. **Data Generation:** A large list (10,000 items) is generated to provide a meaningful benchmark.
+2. **Measurement (Loop):** The system records the start and end time of a standard `for-each` loop filter.
+3. **Measurement (Stream):** The system records the start and end time of a `stream().filter()` pipeline.
+4. **Analysis:** The elapsed times are compared to show the overhead vs. readability trade-offs.
