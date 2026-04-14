@@ -108,3 +108,16 @@ To ensure data integrity by validating user input against strict business rules.
 3. **Matching:** The `Matcher` class compares input strings against the compiled patterns.
 4. **Validation:** The system uses `matches()` to confirm if the entire string follows the rule, rejecting incorrect formats like lowercase letters or wrong digit counts.
 
+---
+
+## Use Case 12: Safety Compliance Check for Goods Bogies
+
+### 🎯 Objective
+To enforce physical safety constraints programmatically. This use case ensures that high-risk cargo (like liquids) is only assigned to appropriate bogie types (Cylindrical) using declarative stream validation.
+
+### 🔄 Application Flow
+1. **Consist Assembly:** A list of `GoodsBogie` objects is created with specific shapes and cargo types.
+2. **Rule Enforcement:** The `allMatch()` operation iterates through the stream.
+3. **Short-Circuit Logic:** If the system finds a "Cylindrical" bogie carrying anything other than "Petroleum", it immediately returns `false`.
+4. **Reporting:** The system flags the entire consist as either "Safety Compliant" or "Safety Violation Detected".
+
