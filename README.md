@@ -55,3 +55,15 @@ To associate bogies with operational attributes like seating or load capacity. T
 3. **Iteration:** The system traverses the `entrySet()` to retrieve both the bogie name and its capacity.
 4. **Output:** The console displays a formatted mapping of all registered bogie capacities.
 
+---
+
+## Use Case 7: Sort Bogies by Capacity (Comparator)
+
+### 🎯 Objective
+To rank and organize bogies based on business logic (seating capacity). This use case introduces custom objects and the `Comparator` interface to enable flexible, non-natural ordering.
+
+### 🔄 Application Flow
+1. **Object Creation:** Bogies are created as objects with `name` and `capacity` properties.
+2. **Storage:** Objects are stored in a dynamic `List`.
+3. **Sorting:** A `Comparator` is applied to rearrange the list based on the integer capacity.
+4. **Output:** The console displays the bogies ranked from lowest to highest capacity.
