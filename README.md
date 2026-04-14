@@ -28,3 +28,21 @@ To model the physical chaining of train bogies where the sequence (Locomotive �
 3. **Mid-Sequence Insertion:** A "Pantry Car" is inserted at index 2.
 4. **Detachment:** The system removes the first (Engine) and last (Guard) bogies.
 5. **Final Layout:** The program displays the surviving ordered consist.
+
+---
+
+## Use Case 5: Preserve Insertion Order of Bogies (LinkedHashSet)
+
+### 🎯 Objective
+To combine the benefits of uniqueness (from Set) and predictable sequencing (from List). This ensures that a train consist is both physically accurate in its order and logically sound by preventing duplicate attachments.
+
+### 🔄 Application Flow
+1. **Attachment:** Bogies are added in a specific order: Engine, Sleeper, Cargo, Guard.
+2. **Duplicate Check:** An attempt is made to add "Sleeper" again.
+3. **Internal Logic:** The `LinkedHashSet` identifies the duplicate and ignores it without crashing.
+4. **Display:** The program prints the final formation, showing the original order with no duplicates.
+
+### 🛠 Running Procedure
+**Step 1: Compile**
+```bash
+javac TrainFormationApp.java
