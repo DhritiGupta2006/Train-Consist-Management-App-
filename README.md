@@ -120,3 +120,16 @@ To evaluate the execution efficiency of different iteration styles. This use cas
 2. **Measurement (Loop):** The system records the start and end time of a standard `for-each` loop filter.
 3. **Measurement (Stream):** The system records the start and end time of a `stream().filter()` pipeline.
 4. **Analysis:** The elapsed times are compared to show the overhead vs. readability trade-offs.
+
+---
+
+## Use Case 14: Handle Invalid Bogie Capacity (Custom Exception)
+
+### 🎯 Objective
+To enforce "fail-fast" validation using custom exception handling. This ensures that only logically valid bogies (capacity > 0) are added to the train system, preventing data corruption in analytics and reporting.
+
+### 🔄 Application Flow
+1. **Validation:** The `PassengerBogie` constructor checks the capacity value before assignment.
+2. **Exception Throwing:** If `capacity <= 0`, the system throws a custom `InvalidCapacityException`.
+3. **Exception Handling:** The calling code uses `try-catch` blocks to manage errors gracefully without crashing the application.
+4. **Outcome:** Invalid objects are never fully instantiated, ensuring only valid data exists in the system.
