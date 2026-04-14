@@ -81,3 +81,16 @@ To transform flat data into a hierarchical structure. This use case uses advance
 3. **Aggregation:** `Collectors.groupingBy` gathers bogies of the same type into lists.
 4. **Storage:** The result is stored in a `Map<String, List<Bogie>>`.
 5. **Output:** The system prints a structured report showing all bogies grouped under their respective categories.
+
+---
+
+## Use Case 10: Count Total Seats in Train (reduce)
+
+### 🎯 Objective
+To provide numerical metrics for the train consist by aggregating individual bogie capacities into a total value. This introduces the concept of reduction in functional programming.
+
+### 🔄 Application Flow
+1. **Data Source:** A list of `Bogie` objects with varying capacities.
+2. **Transformation:** The `map()` function extracts only the `capacity` (Integer) from each object.
+3. **Aggregation:** The `reduce(0, Integer::sum)` operation adds all extracted values together.
+4. **Output:** The system displays the final total seating capacity of the entire train.
