@@ -42,7 +42,16 @@ To combine the benefits of uniqueness (from Set) and predictable sequencing (fro
 3. **Internal Logic:** The `LinkedHashSet` identifies the duplicate and ignores it without crashing.
 4. **Display:** The program prints the final formation, showing the original order with no duplicates.
 
-### 🛠 Running Procedure
-**Step 1: Compile**
-```bash
-javac TrainFormationApp.java
+---
+
+## Use Case 6: Map Bogie to Capacity (HashMap)
+
+### 🎯 Objective
+To associate bogies with operational attributes like seating or load capacity. This use case moves beyond flat lists or sets by introducing key-value data representation using the `HashMap`.
+
+### 🔄 Application Flow
+1. **Mapping Creation:** A `HashMap` is initialized where bogie names are keys and capacities are values.
+2. **Data Entry:** Capacities for different bogie types (e.g., Sleeper, Cargo) are inserted using `put()`.
+3. **Iteration:** The system traverses the `entrySet()` to retrieve both the bogie name and its capacity.
+4. **Output:** The console displays a formatted mapping of all registered bogie capacities.
+
