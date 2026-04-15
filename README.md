@@ -133,3 +133,17 @@ To enforce "fail-fast" validation using custom exception handling. This ensures 
 2. **Exception Throwing:** If `capacity <= 0`, the system throws a custom `InvalidCapacityException`.
 3. **Exception Handling:** The calling code uses `try-catch` blocks to manage errors gracefully without crashing the application.
 4. **Outcome:** Invalid objects are never fully instantiated, ensuring only valid data exists in the system.
+
+---
+
+## Use Case 15: Safe Cargo Assignment Using try-catch-finally
+
+### 🎯 Objective
+To handle runtime operational errors without crashing the system. This use case uses `try-catch-finally` to manage unsafe cargo assignments (e.g., Petroleum in a Rectangular bogie) while ensuring audit logs are always written.
+
+### 🔄 Application Flow
+1. **Assignment Request:** The user attempts to assign a cargo type to an existing bogie.
+2. **Rule Validation:** Inside the `try` block, the system checks if the shape/cargo combination is hazardous.
+3. **Exception Handling:** If unsafe, a `CargoSafetyException` is thrown and caught by the `catch` block, preventing a crash.
+4. **Cleanup/Logging:** The `finally` block executes a mandatory audit log entry, regardless of whether the assignment succeeded or failed.
+5. **Continuation:** The application remains stable and ready for the next command.
