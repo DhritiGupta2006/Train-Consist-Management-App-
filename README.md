@@ -174,4 +174,18 @@ To transition from manual algorithms to optimized standard library methods. This
 3. **Internal Sorting:** The strings are compared based on their Unicode values (Natural Ordering).
 4. **Output:** The sorted array is printed using `Arrays.toString()`.
 
+---
+
+## Use Case 18: Linear Search for Bogie ID (Array-Based Searching)
+
+### 🎯 Objective
+To implement a reliable search mechanism for identifying specific bogies. This use case teaches sequential traversal and equality comparison, allowing the system to pinpoint data within an unsorted consist.
+
+### 🔄 Application Flow
+1. **Input:** An array of Bogie IDs and a target "Search Key."
+2. **Traversal:** The system iterates through the array from index 0 to $n-1$.
+3. **Comparison:** Every element is checked against the key using `.equals()`.
+4. **Early Termination:** If a match is found, the loop breaks immediately to save processing time.
+5. **Output:** The system reports whether the bogie exists in the current consist.
+
 
