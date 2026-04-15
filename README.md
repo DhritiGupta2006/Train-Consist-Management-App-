@@ -147,3 +147,31 @@ To handle runtime operational errors without crashing the system. This use case 
 3. **Exception Handling:** If unsafe, a `CargoSafetyException` is thrown and caught by the `catch` block, preventing a crash.
 4. **Cleanup/Logging:** The `finally` block executes a mandatory audit log entry, regardless of whether the assignment succeeded or failed.
 5. **Continuation:** The application remains stable and ready for the next command.
+
+---
+
+## Use Case 16: Sort Passenger Bogies by Capacity (Bubble Sort)
+
+### 🎯 Objective
+To implement the Bubble Sort algorithm manually. This ensures a deep understanding of comparison-based sorting and array manipulation without relying on `Arrays.sort()`.
+
+### 🔄 Algorithmic Flow
+1. **Adjacent Comparison:** Compare two neighboring capacities.
+2. **Positional Swap:** If the first is larger than the second, they swap places.
+3. **Ascending Bubble:** High-capacity values move toward the end of the list with each iteration.
+4. **Completion:** The loops terminate once every element is smaller than its successor.
+
+---
+
+## Use Case 17: Sort Bogie Names Using Arrays.sort()
+
+### 🎯 Objective
+To transition from manual algorithms to optimized standard library methods. This use case demonstrates how `Arrays.sort()` provides a more maintainable, readable, and efficient way to organize train data alphabetically.
+
+### 🔄 Application Flow
+1. **Input:** A string array containing various bogie type names in unsorted order.
+2. **Library Call:** The system invokes `Arrays.sort(bogieNames)`, which uses Java's optimized internal sorting logic.
+3. **Internal Sorting:** The strings are compared based on their Unicode values (Natural Ordering).
+4. **Output:** The sorted array is printed using `Arrays.toString()`.
+
+
